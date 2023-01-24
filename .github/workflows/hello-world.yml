@@ -13,10 +13,9 @@ jobs:
         name: code
         path: .
   Build:
-    name: Build
-    needs: Clone-down
-    runs-on: ubuntu-latest
-    container: gradle:6-jdk11
+      runs-on: ubuntu-latest
+      needs: Clone-down
+      container: gradle:6-jdk11
       steps:
       - name: Download code
         uses: actions/download-artifact@v3
